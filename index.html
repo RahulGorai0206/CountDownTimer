@@ -8,27 +8,46 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="main">
+    <div class="divInp" id="divInp">
+        <div class="txt">CountDown Timer !</div>
+        <div class="inputDiv">
+            <div class="inputBox">
+                <input type="text" id="hour" name="hour" maxlength="2"  min="0" max="99" step="1" placeholder="00" pattern="[0-9]{4}" style="color:#888;" required/>
+                <label for="hour">Hour</label>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="min" name="hour" maxlength="2"  min="0" max="99" step="1" placeholder="00" pattern="[0-9]{4}" style="color:#888;" required/>
+                <label for="min">Minute</label>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="sec" name="hour" maxlength="2"  min="0" max="99" step="1" placeholder="00" pattern="[0-9]{4}" style="color:#888;" required/>
+                <label for="sec">Second</label>
+            </div>
+        </div>
+        <button class="startBtn" onclick="startTimer()">Start Timer</button>
+    </div>
+    <div class="main" id="main">
         <div class="txt">CountDown Timer !</div>
         <div class="txt2" id="txtt">Your Time Ends In :</div>
         <div class="inputDiv">
             <div class="inputBox">
-                <input type="text" readonly value="00">
+                <input type="text" id="res0" readonly value="00">
                 <p>Days</p>
             </div>
             <div class="inputBox">
-                <input type="text" readonly value="00">
+                <input type="text" id="res1" readonly value="00">
                 <p>Hours</p>
             </div>
             <div class="inputBox">
-                <input type="text" readonly value="00">
+                <input type="text" id="res2" readonly value="00">
                 <p>Minutes</p>
             </div>
             <div class="inputBox">
-                <input type="text" readonly value="00">
+                <input type="text" id="res3" readonly value="00">
                 <p>Seconds</p>
             </div>
         </div>
+        <Button onclick="window.location.reload()" id="refBtn">Reset</Button>
     </div>
     <script src="./timer.js"></script>
 </body>
